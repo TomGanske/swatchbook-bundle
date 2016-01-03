@@ -15,17 +15,24 @@ SwatchBook is a color pallets management extension for the **Contao CMS in Versi
 
 ###Instruction to get it work###
 
-1. open - vendor/composer/autoload_psr4.php and paste follow line inside the return array...
+1. create follow folder structure in your Contao 4 root directory
+> src/CtEye/swatchbook-bundle/
+
+2. copy the repository content starting with src inside the swatchbook-bundle folder
+> before :: src/CtEye/swatchbook-bundle/
+> after  :: src/CtEye/swatchbook-bundle/src/Resources/...
+
+3. open - vendor/composer/autoload_psr4.php and paste follow line inside the return array...
 > 'CtEye\\swatchbookBundle\\' => array($baseDir."/src" . '/CtEye/swatchbook-bundle/src'),
 
 
-2. open - app/AppKernel.php and paste follow line inside the $bundles = [...] block
+4. open - app/AppKernel.php and paste follow line inside the $bundles = [...] block
 > new CtEye\swatchbookBundle\swatchbookBundle(),
 
 
-3. open the Install Tool and create the required tables for the swatchbook-bundle
+5. open the Install Tool and create the required tables for the swatchbook-bundle
 
-4. activate inside the website layout the jQuery checkbox
+6. activate inside the website layout the jQuery checkbox
 
 
 
