@@ -14,8 +14,7 @@ SwatchBook is a color pallets management extension for the **Contao CMS in Versi
 * easy to use with Bootstrap
 
 ###Instruction to get it work###
-* paste follow lines into the fe_page.html5 (*.xhtml)
-* active in your website layout the jQuery checkbox
+* activate inside the website layout the jQuery checkbox
 
 
 *I think that`s it. Enjoy it and let me know...*
