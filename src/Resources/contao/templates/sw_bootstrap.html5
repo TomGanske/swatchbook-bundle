@@ -1,0 +1,35 @@
+<?php if($this->noResult): ?>
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 ce_swatchbook">
+    <?= $this->noResult ?>
+</div>
+<?php endif; ?>
+
+<?php if(!$this->noResult): ?>
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 ce_swatchbook">
+    <div id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-default">
+            <li class="dropdown">
+                <a href="#palette" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?= $this->countPallets ?> - <?= $this->palletText ?><span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-cart" role="menu">
+                    <?php foreach($this->sources as $k => $v): ?>
+                    <li>
+                      <span class="item" style="padding-left:10px">
+                       <a href="<?= $this->href ?>" class="button" rel="<?= $k ?>"><?= $v ?></a>
+                    </span>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h1></h1>
+            <?= $this->noResult ?>
+        <div class="ajaxContent">
+            <?= $this->colorsPalette ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

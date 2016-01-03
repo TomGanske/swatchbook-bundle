@@ -1,0 +1,15 @@
+<div>
+    <ul>
+        <?php if(is_array($this->sources)): ?>
+        <?php foreach($this->sources as $k => $v): ?>
+        <li>
+            <a href="<?= $this->href ?>" class="button" rel="<?= $k ?>"><?= $v ?></a>
+        </li>
+        <?php endforeach; ?>
+        <?php endif; ?>
+    </ul>
+</div>
+<div>
+    <?= $this->noResult ?>
+    <div class="ajaxContent"><?= $this->colorsPalette ?></div>
+</div>

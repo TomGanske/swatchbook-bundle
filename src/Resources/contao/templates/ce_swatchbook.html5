@@ -1,0 +1,24 @@
+<div class="<?= $this->class; ?> block"<?= $this->cssID; ?>>
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl?>>
+    <?= $this->element ?>
+</div>
+
+<script>
+    var data = {};
+    data["REQUEST_TOKEN"] = "<?= REQUEST_TOKEN ?>";
+
+    $(document).ready(function()
+    {
+        $(".button").click(function()
+        {
+            data['id'] = $(this).attr('rel');
+            $.post('<?= \Contao\Environment::get('requestUri')?>',
+                    data,
+                    function(responseText) {
+                        $('.ajaxContent').html(responseText);
+                    },'html'
+            ).fail(function( jqXhr, textStatus, errorThrown ){ console.log( errorThrown )});
+            event.preventDefault();
+        })
+    })
+</script>

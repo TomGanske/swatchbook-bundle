@@ -1,0 +1,16 @@
+<div>
+
+    <div id="tl_buttons">
+        <a href="<?= $this->hrefBack; ?>" class="header_back" title="<?= $this->goBack; ?>" accesskey="b" onclick="Backend.getScrollOffset();"><?= $this->goBack; ?></a>
+    </div>
+
+
+    <h2 class="sub_headline"><?= $this->headline ?></h2>
+    <div class="tl_tbox">
+        <?php if ($this->pallets): ?>
+        <div class="tl_message">
+            <?= $this->pallets ?>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>

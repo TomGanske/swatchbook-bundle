@@ -1,0 +1,29 @@
+<div id="sb-container-<?= $this->id ?>" class="sb-container">
+    <?php foreach($this->child_list as  $v): ?>
+    <div>
+        <span class="sb-icon"></span>
+        <h4><span><?php echo $v; ?></span></h4>
+    </div>
+    <?php endforeach; ?>
+</div>
+<div><?= $this->text ?></div>
+<div><?= $this->advice ?></div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#sb-container-<?= $this->id ?>").swatchbook(
+        {
+            speed : 500,
+            easing : "ease-out",
+            // index of initial centered item
+            center : 1,
+            // number of degrees that is between each item
+            angleInc : 14,
+            // amount in degrees for the opened items next sibling
+            proximity : 30,
+            // amount in degrees between the opened items next siblings
+            neighbor : 4
+        });
+    })
+</script>
