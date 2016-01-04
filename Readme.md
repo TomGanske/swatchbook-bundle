@@ -31,6 +31,11 @@ SwatchBook is a color pallets management extension for the **Contao CMS in Versi
 > new CtEye\swatchbookBundle\swatchbookBundle(),
 
 
+5. create a symlink from your bundle folder
+> open the path src/CtEye/swatchbook-bundle/src/Resources/
+> create a Symlink from the public folder into the **web/** directory and rename it swatchbook
+> finally you have a symlink folder under the **web/** directory called swatchbook
+
 5. open the **Contao install tool** and create the required tables for the swatchbook-bundle
 
 6. activate inside the website layout the jQuery checkbox
