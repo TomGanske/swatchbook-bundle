@@ -9,9 +9,8 @@ SwatchBook is a color pallets management extension for the **Contao CMS in Versi
 > **Thanks!**
 
 ##Requirements##
-* Contao Extension
-* Version 2
-* easy to use with Bootstrap
+* Contao 4 CMS
+* Bootstrap Framework
 
 ###Instruction to get it work###
 
